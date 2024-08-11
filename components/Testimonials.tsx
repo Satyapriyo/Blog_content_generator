@@ -11,7 +11,7 @@ export default function Testimonials() {
           Testimonials
         </div>
         <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-          Here's what our customers said
+          Here&apos;s what our customers said
         </h2>
         <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
           Testimonials is a great way to increase brand trust and awareness. Use
@@ -88,7 +88,7 @@ export default function Testimonials() {
                 <mark className="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
                   awesome
                 </mark>{" "}
-                landing page template I've seen. I would use this for anything.
+                landing page template I&apos;ve seen. I would use this for anything.
               </p>
               <div className="flex items-center mt-8 space-x-3">
                 <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
