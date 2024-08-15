@@ -14,9 +14,9 @@ const Footer = () => {
                 className="w-8 text-deep-purple-accent-400"
                 viewBox="0 0 24 24"
                 strokeLinejoin="round"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeMiterlimit="10"
                 stroke="currentColor"
                 fill="none"
               >
