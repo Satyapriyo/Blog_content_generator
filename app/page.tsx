@@ -2,8 +2,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Head from "next/head";
+import HeroSection from "../components/HeroSection"
 import { TypeAnimation } from "react-type-animation";
-import Navbar from "../components/Navbar";
+
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/footer";
 interface BlogPost {
@@ -41,7 +42,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Head>
         <title>AI Blog Writer - Generate Amazing Content</title>
         <meta
@@ -49,6 +50,7 @@ export default function Home() {
           content="Generate high-quality blog posts with AI"
         />
       </Head>
+      <HeroSection />
       <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 py-12 px-4 sm:px-6 lg:px-8">
