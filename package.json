@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.16.0",
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "@tailwindcss/typography": "github:tailwindcss/typography",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.3",

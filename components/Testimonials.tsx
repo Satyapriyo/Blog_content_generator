@@ -5,7 +5,7 @@ import Testimonial3 from "./../public/testimonial3.jpeg";
 
 export default function Testimonials() {
   return (
-    <div className="py-5 dark:bg-gray-900 rounded-lg">
+    <div id="testimonials" className="py-5 dark:bg-gray-900 rounded-lg">
       <div className="container flex flex-col items-center justify-center w-full p-6 mx-auto text-center xl:px-0">
         <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
           Testimonials

@@ -25,3 +25,15 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+#featurs{
+  scroll-behavior: smooth;
+}
+#testimonials{
+  scroll-behavior: smooth;
+}
+#contact{
+  scroll-behavior: smooth;
+}
+html{
+  scroll-behavior: smooth;
+}
