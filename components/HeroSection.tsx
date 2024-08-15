@@ -1,9 +1,7 @@
-
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-
 
 const navigation = [
   { name: "Product", href: "" },
@@ -139,10 +137,13 @@ const Hero = () => {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Create Engaging Content with AI-Powered Precision
+              Create Engaging Content with AI-Powered Precision
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-            Effortlessly generate high-quality blog posts, articles, and more. Let our AI take care of the writing, so you can focus on what matters most. From idea to publication, streamline your content creation process with cutting-edge technology.
+              Effortlessly generate high-quality blog posts, articles, and more.
+              Let our AI take care of the writing, so you can focus on what
+              matters most. From idea to publication, streamline your content
+              creation process with cutting-edge technology.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a

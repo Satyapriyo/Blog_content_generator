@@ -2,18 +2,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Head from "next/head";
-import HeroSection from "../components/HeroSection"
-import { TypeAnimation } from "react-type-animation";
-<<<<<<< HEAD
-import Features from "../components/Features"
-=======
 
->>>>>>> 53234d9d5a1abb77564845d93973254558d8e0f0
+import { TypeAnimation } from "react-type-animation";
+import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/footer";
-import Hero from "../components/HeroSection"
+import HeroSection from "../components/HeroSection";
 interface BlogPost {
-
   content: string;
 }
 
@@ -48,11 +43,8 @@ export default function Home() {
 
   return (
     <>
-<<<<<<< HEAD
-   
-=======
       {/* <Navbar /> */}
->>>>>>> 53234d9d5a1abb77564845d93973254558d8e0f0
+
       <Head>
         <title>AI Blog Writer - Generate Amazing Content</title>
         <meta
@@ -60,13 +52,11 @@ export default function Home() {
           content="Generate high-quality blog posts with AI"
         />
       </Head>
-<<<<<<< HEAD
-      <Hero/>
-=======
+
       <HeroSection />
->>>>>>> 53234d9d5a1abb77564845d93973254558d8e0f0
+
       <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-8">
