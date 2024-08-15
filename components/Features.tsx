@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
-"use client"
->>>>>>> 53234d9d5a1abb77564845d93973254558d8e0f0
+
+
+
 const Features = ()=>{
     return (
         
