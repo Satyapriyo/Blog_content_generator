@@ -13,7 +13,7 @@ const Footer = () => {
               <svg
                 className="w-8 text-deep-purple-accent-400"
                 viewBox="0 0 24 24"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-miterlimit="10"
