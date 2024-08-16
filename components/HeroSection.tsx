@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import logo from "../public/next.svg";
+import Image from "next/image";
 
 const navigation = [
   { name: "Product", href: "" },
@@ -23,9 +25,11 @@ const Hero = () => {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              <Image
+                alt="nothing"
+                width="10"
+                height="10"
+                src={logo}
                 className="h-8 w-auto"
               />
             </a>
@@ -70,9 +74,11 @@ const Hero = () => {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
-                  alt=""
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                <Image
+                  alt="nothing"
+                  width="10"
+                  height="10"
+                  src={logo}
                   className="h-8 w-auto"
                 />
               </a>
