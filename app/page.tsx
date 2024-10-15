@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Head from "next/head";
-
+import ReactMarkdown from "react-markdown"
 import { TypeAnimation } from "react-type-animation";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
@@ -43,7 +43,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <Navbar /> */}
 
       <Head>
         <title>AI Blog Writer - Generate Amazing Content</title>
@@ -80,7 +79,7 @@ export default function Home() {
                       <textarea
                         id="prompt"
                         className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500"
-                        rows={4}
+                        rows={2}
                         value={prompt}
                         onChange={(e) => setPrompt(e.target.value)}
                         placeholder="E.g., '10 tips for productive remote work'"
@@ -137,7 +136,7 @@ export default function Home() {
                           sequence={[blogPost, () => setIsTyping(false)]}
                           wrapper="div"
                           cursor={true}
-                          speed={50}
+                          speed={99}
                           style={{
                             whiteSpace: "pre-line",
                             display: "inline-block",
@@ -146,7 +145,10 @@ export default function Home() {
                       ) : (
                         blogPost.split("\n").map((paragraph, index) => (
                           <p key={index} className="mb-4 text-gray-700">
-                            {paragraph}
+                            <ReactMarkdown>
+                              {paragraph}
+                            </ReactMarkdown>
+
                           </p>
                         ))
                       )}
@@ -164,7 +166,7 @@ export default function Home() {
 
         <div
           id="contact"
-          className="bg-white shadow-xl max-w-[800px] mx-auto mt-40 rounded-lg overflow-hidden mt-12"
+          className="bg-white shadow-xl max-w-[800px] mx-auto mt-40 rounded-lg overflow-hidden"
         >
           <div className="p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
