@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Head from "next/head";
-import ReactMarkdown from "react-markdown"
+import ReactMarkdown from "react-markdown";
 import { TypeAnimation } from "react-type-animation";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
@@ -32,6 +32,7 @@ export default function Home() {
       console.error("Error generating blog post:", error);
       setBlogPost("An error occurred while generating the blog post.");
     }
+
     setIsLoading(false);
   };
 
@@ -43,7 +44,6 @@ export default function Home() {
 
   return (
     <>
-
       <Head>
         <title>AI Blog Writer - Generate Amazing Content</title>
         <meta
@@ -145,10 +145,7 @@ export default function Home() {
                       ) : (
                         blogPost.split("\n").map((paragraph, index) => (
                           <p key={index} className="mb-4 text-gray-700">
-                            <ReactMarkdown>
-                              {paragraph}
-                            </ReactMarkdown>
-
+                            <ReactMarkdown>{paragraph}</ReactMarkdown>
                           </p>
                         ))
                       )}
