@@ -11,8 +11,8 @@ const Features = ()=>{
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* AI Generated Content */}
             <div
-              className="bg-white shadow-lg hover:bg-black 
-              text-gray-800 hover:text-white rounded-lg overflow-hidden"
+              className="bg-white shadow-lg hover:scale-105  duration-300 ease-in-out
+              text-gray-800  rounded-lg overflow-hidden"
             >
               <div className="p-6">
                 <svg
@@ -37,7 +37,8 @@ const Features = ()=>{
               </div>
             </div>
             {/* Fast Response */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div className="bg-white shadow-lg  hover:scale-105  duration-300 ease-in-out
+               rounded-lg overflow-hidden">
               <div className="p-6">
                 <svg
                   className="w-12 h-12 text-blue-500 mb-4"
@@ -63,7 +64,8 @@ const Features = ()=>{
               </div>
             </div>
             {/* No Limitation */}
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div className="bg-white shadow-lg hover:scale-105  duration-300 ease-in-out
+              text-gray-800  rounded-lg overflow-hidden">
               <div className="p-6">
                 <svg
                   className="w-12 h-12 text-blue-500 mb-4"
