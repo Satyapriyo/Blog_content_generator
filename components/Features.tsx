@@ -1,14 +1,19 @@
-const Features: React.FC = () => {
+
+"use client";
+
+
+const Features = () => {
   return (
-    <div id="featurs" className="mb-40 ">
-      <h2 className="md:text-[120px] font-bold text-center text-gray-900 mb-8">
+
+    <div id="featurs" className="mb-40 mt-20">
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
         Our Features
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* AI Generated Content */}
         <div
-          className="bg-white shadow-lg hover:scale-105 duration-300
-              text-gray-800 rounded-lg overflow-hidden cursor-pointer"
+          className="bg-white shadow-lg hover:scale-105  duration-300 ease-in-out
+              text-gray-800  rounded-lg overflow-hidden"
         >
           <div className="p-6">
             <svg
@@ -33,7 +38,8 @@ const Features: React.FC = () => {
           </div>
         </div>
         {/* Fast Response */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 cursor-pointer duration-300">
+        <div className="bg-white shadow-lg  hover:scale-105  duration-300 ease-in-out
+               rounded-lg overflow-hidden">
           <div className="p-6">
             <svg
               className="w-12 h-12 text-blue-500 mb-4"
@@ -48,7 +54,6 @@ const Features: React.FC = () => {
                 strokeWidth={2}
                 d="M13 10V3L4 14h7v7l9-11h-7z"
               />
-
             </svg>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Fast Response
@@ -60,7 +65,8 @@ const Features: React.FC = () => {
           </div>
         </div>
         {/* No Limitation */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 duration-300 cursor-pointer">
+        <div className="bg-white shadow-lg hover:scale-105  duration-300 ease-in-out
+              text-gray-800  rounded-lg overflow-hidden">
           <div className="p-6">
             <svg
               className="w-12 h-12 text-blue-500 mb-4"
@@ -85,8 +91,10 @@ const Features: React.FC = () => {
             </p>
           </div>
         </div>
+
       </div>
     </div>
+
   )
 }
 
