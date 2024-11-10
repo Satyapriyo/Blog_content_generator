@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Head from "next/head";
 
+import Markdown from "react-markdown";
+import copy from 'copy-to-clipboard';
+import { LuCopy, LuCopyCheck } from "react-icons/lu";
+
 import { TypeAnimation } from "react-type-animation";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
@@ -17,7 +21,12 @@ export default function Home() {
   const [blogPost, setBlogPost] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isTyping, setIsTyping] = useState<boolean>(false);
-
+  const [iscopied, setiscopied] = useState<boolean>(false);
+  const copyContent = () => {
+    copy(blogPost, { debug: false });
+    setiscopied(true);
+    return;
+  }
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
@@ -32,6 +41,7 @@ export default function Home() {
       console.error("Error generating blog post:", error);
       setBlogPost("An error occurred while generating the blog post.");
     }
+
     setIsLoading(false);
   };
 
@@ -43,8 +53,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <Navbar /> */}
-
       <Head>
         <title>AI Blog Writer - Generate Amazing Content</title>
         <meta
@@ -80,7 +88,7 @@ export default function Home() {
                       <textarea
                         id="prompt"
                         className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500"
-                        rows={4}
+                        rows={2}
                         value={prompt}
                         onChange={(e) => setPrompt(e.target.value)}
                         placeholder="E.g., '10 tips for productive remote work'"
@@ -128,27 +136,32 @@ export default function Home() {
               {blogPost && (
                 <div className="bg-white shadow-xl text-black rounded-lg overflow-hidden">
                   <div className="p-6">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                      Generated Blog Post
-                    </h2>
+                    <div className="flex justify-between">
+                      <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                        Generated Blog Post
+                      </h2>
+                      < button onClick={copyContent} className="pointer bg-gray-100 rounded-lg px-4 py-2 flex justify-around items-center">{iscopied ? <LuCopyCheck /> : <LuCopy />}copy</button>
+                    </div>
                     <div className="prose max-w-none">
                       {isTyping ? (
                         <TypeAnimation
                           sequence={[blogPost, () => setIsTyping(false)]}
                           wrapper="div"
                           cursor={true}
-                          speed={50}
+                          speed={99}
                           style={{
                             whiteSpace: "pre-line",
                             display: "inline-block",
                           }}
                         />
                       ) : (
-                        blogPost.split("\n").map((paragraph, index) => (
-                          <p key={index} className="mb-4 text-gray-700">
-                            {paragraph}
-                          </p>
-                        ))
+
+                        <Markdown>{blogPost}</Markdown>
+                        // blogPost.split("\n").map((paragraph, index) => (
+                        //   <p key={index} className="mb-4 text-gray-700">
+                        //     <Markdown> {paragraph}</Markdown>
+                        //   </p>
+                        // ))
                       )}
                     </div>
                   </div>
@@ -158,13 +171,15 @@ export default function Home() {
           </div>
         </div>
         <Features />
-        {/* testimonial */}
+
         <Testimonials />
-        {/* contact section */}
+
 
         <div
           id="contact"
-          className="bg-white shadow-xl max-w-[800px] mx-auto mt-40 rounded-lg overflow-hidden mt-12"
+
+          className="bg-white shadow-xl max-w-[800px] mx-auto  rounded-lg overflow-hidden mt-12"
+
         >
           <div className="p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
